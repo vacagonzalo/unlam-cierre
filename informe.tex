@@ -57,7 +57,28 @@ Este documento trata el estado de avance de la investigación del \emph{software
 
 \section*{Introducción}
 
+\emph{openEMS} es un programa que soluciona simulaciones electromagnéticas.
+Su núcleo utiliza el método de \emph{Finite-diffrecence time-domain} (FDTD) y se implementó en el lenguaje de programación \emph{C}.
+
+Además de su núcleo tiene los siguientes módulos:
+
+\begin{itemize}
+\item Biblioteca \emph{QSCXCAD}: componente que permite representar geometrías.
+\item \emph{AppCSXCAD}: interfaz gráfica para la biblioteca \emph{QSCXCAD}.
+\item Biblioteca\emph{CSXCAD}: permite describir objetos geométricos y sus propiedades físicas y no-físicas.
+\item \emph{CTB}: herramienta para circuitos en \emph{Maltab/Octave}.
+\item \emph{fparser}: analizador de funciones para el lenguaje de programación \emph{C++}.
+\item \emph{hyp2mat}: ofrece la posibilidad de importar archivos \emph{Hyperlynx Boardsim} a \emph{openEMS} en \emph{Matlab/Octave}.
+\end{itemize}
+
 \section*{Interfaz de programación de aplicaciones}
+
+Existen dos interfaces de programación de aplicaciones (API): \emph{Matlab/Octave} y \emph{Python 3}.
+
+\emph{Matlab/Octave} es la API original del programa, sin embargo tiene poco mantenimiento y los módulos relevantes para la simulación de compatibilidad electromagnética se encuentran en un estado no funcional.
+
+La nueva API es \emph{Python 3}, sus módulos se encuentran en mantenimiento activo y continuo desarrollo.
+La única desventaja es que tienen un grado de maduración menor y ofrecen menos funcionalidades que la API original.
 
 \section*{Evaluación de la interfaz \emph{Python 3}}
 
