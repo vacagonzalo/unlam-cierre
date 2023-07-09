@@ -65,7 +65,7 @@ Además de su núcleo tiene los siguientes módulos:
 \begin{itemize}
 \item Biblioteca \emph{QSCXCAD}: componente que permite representar geometrías.
 \item \emph{AppCSXCAD}: interfaz gráfica para la biblioteca \emph{QSCXCAD}.
-\item Biblioteca\emph{CSXCAD}: permite describir objetos geométricos y sus propiedades físicas y no-físicas.
+\item Biblioteca \emph{CSXCAD}: permite describir objetos geométricos y sus propiedades físicas y no-físicas.
 \item \emph{CTB}: herramienta para circuitos en \emph{Maltab/Octave}.
 \item \emph{fparser}: analizador de funciones para el lenguaje de programación \emph{C++}.
 \item \emph{hyp2mat}: ofrece la posibilidad de importar archivos \emph{Hyperlynx Boardsim} a \emph{openEMS} en \emph{Matlab/Octave}.
@@ -82,6 +82,28 @@ La única desventaja es que tienen un grado de maduración menor y ofrecen menos
 
 \section*{Evaluación de la interfaz \emph{Python 3}}
 
+La API \emph{Python 3} permite interactuar con los siguientes componentes:
+
+\begin{itemize}
+\item \emph{CSXCAD}: permite diseñar geometrías físicas y de simulación y definir sus propiedades.
+\item Núcleo \emph{openEMS}: permite definir los puntos de entrada y medición y generar la solución de la simulación.
+\end{itemize}
+
+La interfaz es completamente funcional sin embargo no se tiene implementado la posibilidad de representar los artefactos generado en \emph{CSXCAD}.
+Además, no se encontró una manera de exportar la simulación para su visualización en \emph{ParaView}.
+
 \section*{Diseño de simulaciones}
+
+El diseño de una simulación de un fenómeno electromagnético requiere del diseño, configuración y armado de:
+
+\begin{itemize}
+\item Substratos y conductores.
+\item Puertos de entrada.
+\item Puertos de salida.
+\item Caja de grabado campo cercano a campo lejano (nf2ff).
+\end{itemize}
+
+Además se debe tener el conocimiento sobre el cálculo de los parámetros de dispersión o parámetros-S.
+Esto es necesario para validar el diseño de toda la simulación.
 
 \end{document}
